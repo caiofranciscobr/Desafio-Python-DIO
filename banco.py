@@ -94,7 +94,6 @@ def padronizar_endereco(endereco: str) -> str:
         if parte:
             palavras = []
             for palavra in parte.split():
-                # se for número, mantém
                 if palavra.isdigit():
                     palavras.append(palavra)
                 else:
@@ -106,7 +105,6 @@ def padronizar_endereco(endereco: str) -> str:
     partes_corrigidas.append(uf)
 
     return ", ".join(partes_corrigidas)
-
 
 def validar_cpf(cpf: str) -> bool:
     cpf = ''.join(filter(str.isdigit, cpf))
@@ -236,5 +234,6 @@ def main():
 
         else:
             print("\nOperação inválida, selecione novamente.")
+
 
 main()
